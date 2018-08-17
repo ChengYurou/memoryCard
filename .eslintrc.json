@@ -1,0 +1,30 @@
+{
+    "plugins": ["react", "react-native"],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".ios.js", ".android.js"]
+            }
+        }
+    },
+    "rules": {
+        "jsx-a11y/accessible-emoji": "off",
+        "no-underscore-dangle": "off",
+        "react/forbid-prop-types": "off",
+        "react/no-unused-prop-types": ["error", { "skipShapeProps": true }],
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+        "import/no-unresolved": ["error", { "ignore": [".png"] }],
+        "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.spec.js"]}],
+        "import/order": ["error", {"newlines-between": "always"}],
+        "no-console": "error",
+        "react-native/no-unused-styles": "error",
+        "react-native/no-inline-styles": "error"
+    },
+    "env": {
+        "node": true,
+        "es6": true,
+        "react-native/react-native": true
+    },
+    "parser": "babel-eslint",
+    "extends": "airbnb"
+}
