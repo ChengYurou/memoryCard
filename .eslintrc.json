@@ -8,6 +8,7 @@
         }
     },
     "rules": {
+        "react/destructuring-assignment": "off",
         "jsx-a11y/accessible-emoji": "off",
         "no-underscore-dangle": "off",
         "react/forbid-prop-types": "off",
