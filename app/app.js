@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 import FlipCard from './components/flipCard/flipCard';
 
@@ -18,6 +18,12 @@ const styles = StyleSheet.create({
   placeholder: {
     flex: 3,
   },
+  frontCard: {
+    backgroundColor: '#9c9',
+  },
+  backCard: {
+    backgroundColor: '#c9c',
+  },
 });
 
 class MemoryCard extends React.Component {
@@ -26,10 +32,26 @@ class MemoryCard extends React.Component {
     this.state = {};
   }
 
+  renderFrontCard = () => (
+    <View style={styles.frontCard}>
+      <Text>front card</Text>
+    </View>
+  );
+
+  renderBackCard = () => (
+    <View style={styles.backCard}>
+      <Text>front card</Text>
+    </View>
+  );
+
   render() {
     return (
       <View style={styles.container}>
-        <FlipCard style={styles.flipCard} isFlipped={false} />
+        <FlipCard
+          style={styles.flipCard}
+          renderFrontCard={this.renderFrontCard}
+          renderBackCard={this.renderBackCard}
+        />
         <View style={styles.placeholder} />
       </View>
     );
