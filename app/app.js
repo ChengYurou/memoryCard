@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#9c9',
     height: 200,
+    margin: 10,
   },
   placeholder: {
     flex: 3,
@@ -28,7 +29,7 @@ class MemoryCard extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <FlipCard style={styles.flipCard} />
+        <FlipCard style={styles.flipCard} isFlipped={false} />
         <View style={styles.placeholder} />
       </View>
     );
